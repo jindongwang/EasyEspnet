@@ -20,4 +20,4 @@ We recommend using this Docker image which contains Everything you need to run E
 EasyEspnet supports multi-GPU training by default using Pytorch DataParallel, but it also supports PyTorch distributed parallel training which is much faster, for example, using 2 GPUs, 1 node: `CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 train.py --dist_train true`
 
 ## Decoding
-set `--decoding_mode true` to perform decoding and CER/WER evaluation.
+set `--decoding_mode true` to perform decoding and CER/WER evaluation. For example: `python train.py --decoding_mode true`
