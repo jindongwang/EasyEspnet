@@ -74,5 +74,5 @@ CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 t
 
 ## Contact
 
-- Wenxin Hou, 
-- Jindong Wang, 
+- [Wenxin Hou](https://houwenxin.github.io/): houwx001@gmail.com
+- [Jindong Wang](http://www.jd92.wang/): jindongwang@outlook.com
