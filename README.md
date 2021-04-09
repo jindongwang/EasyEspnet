@@ -21,9 +21,9 @@ Currently, this repo supports ASR tasks only. All you need is to extract feature
 
 There are three main Python files to use:
 
-- `train.py`:
-- `data_load.py`:
-- `utils.py`:
+- `train.py`: the core script to execute ASR model training, decoding and evaluating.
+- `data_load.py`: contains the data configuration which is necessary to specify before training your model and related data loading functions
+- `utils.py`: contains various utility functions including model saving/loading, recognizing and evaluating functions
 
 You need to check or modify in `train.py arg_list`, config should be in ESPnet config style (remember to include decoding information if you want to compute cer/wer), then, you can run train.py. For example, 
 
