@@ -21,12 +21,9 @@ from utils import recognize_and_evaluate
 
 def add_custom_arguments(parser):
     parser.add_argument('--data_file', type=str, default=None)
-    parser.add_argument("--root_path", type=str, default="/D_data/libriadapt_processed/asr1/")
+    parser.add_argument("--root_path", type=str, required=True, help="Path to the ESPnet features, e.g.: <espnet_path>/egs/an4/asr1/")
     #parser.add_argument("--root_path", type=str, default="/opt/espnet/egs/an4/asr1/")
-    parser.add_argument('--dataset', type=str, default="libriadapt_en_us_clean_shure", 
-                                                    choices=["libriadapt_en_us_clean_shure", 
-                                                    "libriadapt_en_gb_clean_shure", 
-                                                    "libriadapt_en_in_clean_shure"])
+    parser.add_argument('--dataset', type=str, required=True, help="Dataset name to be referred in data_load, e.g.: an4")
     #parser.add_argument("--dataset", type=str, default="an4")
     parser.add_argument("--exp", type=str, default="exp")
     parser.add_argument("--decoding_mode", type=str2bool, default=False, help="if true, then only perform decoding test")

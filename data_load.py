@@ -15,28 +15,28 @@ data_config = {
         "val": "dump/dev_clean/deltafalse/data_unigram5000.json",
         "test": "dump/test_clean/deltafalse/data_unigram5000.json",
         "token": "data/lang_char/train_960_unigram5000_units.txt",
-        "prefix": "/espnet/egs/librispeech/asr1/",
+        "prefix": "/espnet/egs/librispeech/asr1",
     },
     "wsj": {
         "train": "dump/train_si284/deltafalse/data.json",
         "val": "dump/test_dev93/deltafalse/data.json",
         "test": "dump/test_eval92/deltafalse/data.json",
         "token": "data/lang_1char/train_si284_units.txt",
-        "prefix": "/opt/espnet/egs/wsj/asr1/",
+        "prefix": "/opt/espnet/egs/wsj/asr1",
     },
     "an4": {
         "train": "dump/train_nodev/deltafalse/data.json",
         "val": "dump/train_dev/deltafalse/data.json",
         "test": "dump/test/deltafalse/data.json",
         "token": "data/lang_1char/train_nodev_units.txt",
-        "prefix": "/home/jindwang/mine/espnet/egs/an4/asr1/",
+        "prefix": "/home/jindwang/mine/espnet/egs/an4/asr1",
     },
     "libriadapt_en_us_clean_matrix": {
         "train": "dump/en_us_clean_matrix/train/deltafalse/data_unigram31.json",
         "val": None,
         "test": "dump/en_us_clean_matrix/test/deltafalse/data_unigram31.json",
         "token": "data/lang_char/en_us_clean_matrix/train_unigram31_units.txt",
-        "prefix": "/D_data/libriadapt_processed/asr1/",
+        "prefix": "/D_data/libriadapt_processed/asr1",
         "bpemodel": "data/lang_char/en_us_clean_matrix/train_unigram31.model",
     },
     "libriadapt_en_us_clean_shure": {
@@ -44,7 +44,7 @@ data_config = {
         "val": None,
         "test": "dump/en_us_clean_shure/test/deltafalse/data_unigram31.json",
         "token": "data/lang_char/en_us_clean_shure/train_unigram31_units.txt",
-        "prefix": "/D_data/libriadapt_processed/asr1/",
+        "prefix": "/D_data/libriadapt_processed/asr1",
         "bpemodel": "data/lang_char/en_us_clean_shure/train_unigram31.model",
     },
     "libriadapt_en_gb_clean_shure": {
@@ -52,7 +52,7 @@ data_config = {
         "val": None,
         "test": "dump/en_gb_clean_shure/test/deltafalse/data_unigram31.json",
         "token": "data/lang_char/en_gb_clean_shure/train_unigram31_units.txt",
-        "prefix": "/D_data/libriadapt_processed/asr1/",
+        "prefix": "/D_data/libriadapt_processed/asr1",
         "bpemodel": "data/lang_char/en_gb_clean_shure/train_unigram31.model",
     },
     "libriadapt_en_in_clean_shure": {
@@ -60,7 +60,7 @@ data_config = {
         "val": None,
         "test": "dump/en_in_clean_shure/test/deltafalse/data_unigram31.json",
         "token": "data/lang_char/en_in_clean_shure/train_unigram31_units.txt",
-        "prefix": "/D_data/libriadapt_processed/asr1/",
+        "prefix": "/D_data/libriadapt_processed/asr1",
         "bpemodel": "data/lang_char/en_in_clean_shure/train_unigram31.model",
     },
 }
@@ -134,7 +134,6 @@ def load_data(root_path, dataset, args):
     odim = info["output"][0]["shape"][1]
 
     use_sortagrad = False  # args.sortagrad == -1 or args.sortagrad > 0
-    # trainset = make_batchset(train_json, batch_size, max_length_in=800, max_length_out=150)
     trainset = make_batchset(
         train_json,
         args.batch_size,
