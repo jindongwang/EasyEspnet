@@ -4,7 +4,7 @@ Making Espnet easier to use.
 
 ## Requirements
 
-We recommend using this Docker image which contains Everything you need to run Espnet: `docker pull jindongwang/espnet:all11`
+We recommend using this Docker image which contains EVERYTHING you need to run EasyEspnet: `docker pull jindongwang/espnet:all11`
 
 
 ## Run
